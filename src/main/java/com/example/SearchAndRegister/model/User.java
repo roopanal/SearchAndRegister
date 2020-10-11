@@ -12,7 +12,7 @@ public class User {
 	private String lastName;
 	private String email;
 	private String password;
-	private String accept_reject_Flag;
+	private String acceptRejectFlag;
 	private String userSex;
 	private String img;
 	
@@ -20,15 +20,23 @@ public class User {
 		// TODO Auto-generated constructor stub
 	}
 
-	public User(Long id, String firstName, String lastName, String email, String password, String accept_reject_Flag, String userSex, String img) {
+	public User(Long id, String firstName, String lastName, String email, String password, String acceptRejectFlag, String userSex, String img) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.password = password;
-		this.accept_reject_Flag = accept_reject_Flag;
+		this.acceptRejectFlag = acceptRejectFlag;
 		this.userSex = userSex;
 		this.img = img;
+	}
+
+	public String getAcceptRejectFlag() {
+		return acceptRejectFlag;
+	}
+
+	public void setAcceptRejectFlag(String acceptRejectFlag) {
+		this.acceptRejectFlag = acceptRejectFlag;
 	}
 
 	public Long getId() {
@@ -69,14 +77,6 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
-	}
-
-	public String getAccept_reject_Flag() {
-		return accept_reject_Flag;
-	}
-
-	public void setAccept_reject_Flag(String accept_reject_Flag) {
-		this.accept_reject_Flag = accept_reject_Flag;
 	}
 
 	public String getUserSex() {
