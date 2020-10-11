@@ -32,6 +32,8 @@ public class userController {
     public String AddUser(User user,@RequestParam("file") MultipartFile file) {
         String fileName = awss3Service.uploadFile(file);
         user.setImg(fileName);
+        user.setAccept_reject_Flag("Y");
+        user.setUserSex("F");
         userService.AddUser(user);
         return "redirect:/registration?success";
     }
