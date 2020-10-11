@@ -4,5 +4,5 @@ package com.example.SearchAndRegister.service;
 import com.example.SearchAndRegister.model.User;
 
 public interface UserService {
-    void AddUser(User user);
+    void addUser(User user);
 }
