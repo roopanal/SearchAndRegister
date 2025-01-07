@@ -30,12 +30,12 @@ public class UserController {
     }
 
     @PostMapping
-    public String addUser(User user,@RequestParam("file") MultipartFile file) {
+    public String AddUser(User user,@RequestParam("file") MultipartFile file) {
         String fileName = awss3Service.uploadFile(file);
         user.setImg(fileName);
         user.setAcceptRejectFlag("Y");
         user.setUserSex("F");
-        userService.addUser(user);
+        userService.AddUser(user);
         return "redirect:/registration?success";
     }
 
